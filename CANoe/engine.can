@@ -1,0 +1,34 @@
+/*@!Encoding:1252*/
+variables
+{
+  msTimer t1;
+  int rpm = 1000;
+  int temp = 40;
+  int speed = 10;
+}
+
+on start
+{
+  setTimer(t1, 100);
+}
+
+on timer t1
+{
+  message EngineData msg;
+
+  rpm += 200;
+  if (rpm > 6000) rpm = 1000;
+
+  speed += 2;
+  if (speed > 120) speed = 10;
+
+  temp = 70 + (rpm / 200);
+
+  msg.RPM = rpm;
+  msg.EngineTemp = temp;
+  msg.Speed = speed;
+
+  output(msg);
+
+  setTimer(t1, 100);
+}
