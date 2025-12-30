@@ -1,7 +1,5 @@
-# Automotive-CAN-Engine-ECU
-CANoe-based CAN simulation for automotive embedded systems
 # Automotive CAN Engine ECU Simulation
-
+##CANoe-based CAN simulation for automotive embedded systems
 ## Overview
 This project demonstrates the design of an automotive Engine ECU
 using CAN communication. The system is designed using CANoe
